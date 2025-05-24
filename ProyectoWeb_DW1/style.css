@@ -12,6 +12,7 @@ body {
   background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -201,3 +202,9 @@ header p {
   font-weight: 300;
   font-size: 1.2rem;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+
