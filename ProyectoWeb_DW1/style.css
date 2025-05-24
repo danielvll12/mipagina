@@ -1,118 +1,158 @@
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Fuente moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #f0f4f8, #e2e8f0);
-      color: #1e293b;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    header {
-      background-color: #1e293b;
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
 
-    header img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      margin-bottom: 1rem;
-    }
+header {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-    }
+header img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+}
 
-    header p {
-      font-size: 1.1rem;
-    }
+nav {
+  background-color: #444;
+  text-align: center;
+  padding: 10px 0;
+}
 
-    nav {
-      background: #334155;
-      padding: 1rem;
-      text-align: center;
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
 
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+nav a:hover {
+  color: #ffc107;
+}
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
+.section {
+  margin-bottom: 60px;
+}
 
-    .section {
-      margin-bottom: 3rem;
-    }
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+}
 
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0f172a;
-    }
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
 
-    .about p {
-      font-size: 1.1rem;
-    }
+.card:hover {
+  transform: translateY(-5px);
+}
 
-    .projects .card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgb(0,0,0,0.1);
-      padding: 1.1rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s;
-    }
+footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
 
-    .projects .card:hover {
-      transform: translateY(-5px);
-    }
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 
-    .projects .card h3 {
-      color: #1e293b;
-      margin-bottom: 0.5rem;
-    }
+  .container {
+    padding: 20px 10px;
+  }
 
-    .contact p {
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-    }
+  header h1 {
+    font-size: 24px;
+  }
 
-    footer {
-      background: #1e293b;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
+  .section h2 {
+    font-size: 22px;
+  }
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
+.btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
 
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
 
-      .projects .card {
-        padding: 1rem;
-      }
-    }
+.social-links a {
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.section:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.section:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.section:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
