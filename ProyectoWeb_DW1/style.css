@@ -208,3 +208,13 @@ html {
 }
 
 
+ display {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2D89EF;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;}
