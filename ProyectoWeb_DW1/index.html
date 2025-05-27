@@ -3,72 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Personal</title>
+  <title>Portafolio Daniel Valle</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
 </head>
 <body>
 
+  <div class="parallax"></div>
+
   <header>
-<img src="perfil.jpg" alt="Foto de perfil">
-    <p><h1>Hola!, Me llamo</h1></p>
-    <h1>Daniel jose valle coreas</h1>
-    <p><h1>Soy</h1></p>
-    <p>Desarrollador Web FullStack Jr</p>
+    <img src="perfil.jpg" alt="Foto de perfil">
+    <h1>¡Hola, Soy Daniel José Valle Coreas</h1>
+    <p>Técnico en Desarrollo de Software</p>
   </header>
 
-  <nav>
-    <a href="#about">Sobre mí</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#contact">Contacto</a>
-    <a href="CV_Daniel_Valle.pdf" class="btn" download>📄 Descargar CV</a>
-    <a href="https://www.facebook.com/danielcoreas" target="_blank">🌐 Facebook</a>
-     <a href="https://github.com/danielvll12" target="_blank">💻 GitHub</a>
+  <aside class="sidebar">
+    <div class="sidebar-logo">Mi Portafolio</div>
+    <nav class="sidebar-nav">
+      <a href="#about">Sobre mí</a>
+      <a href="#formacion">Estudios</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contacto</a>
+      <a href="CV_Daniel_Valle.pdf" download>📄 Descargar CV</a>
+    </nav>
+    <div class="sidebar-socials">
+      <a href="https://wa.me/50374811907" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"></a>
+      <a href="https://github.com/danielvlle12" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
+      <a href="https://facebook.com/danielvalle" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+    </div>
+  </aside>
 
-  </nav>
-
-  <div class="container">
-    <section id="about" class="section about">
+  <main class="container">
+    <section id="about">
       <h2>Sobre mí</h2>
-      <p>Soy un joven desarrollador web con pasión por la tecnología, diseño y programacion web. Me encanta transformar ideas en soluciones funcionales y atractivas para el usuario. Manejo bases de Datos Mysql. Uso Lenguajes de programacion python, php, javascript. Uso Frameworks Django, Flask, Node.js y laravel</p>
+      <p>Soy un joven desarrollador web Frontend y Backend con pasión por la tecnología y la programación. Manejo bases de datos relacionales y no relacionales. Trabajo con Python, PHP, JavaScript, y frameworks como Django, Flask, Laravel y Node.js.</p>
     </section>
 
-    <section id="projects" class="section projects">
+    <section id="projects">
       <h2>Proyectos</h2>
-
       <div class="card">
         <h3>Sistema de Inventario</h3>
-        <p>Aplicación web para gestionar productos, entradas, salidas y reportes. Hecho con HTML, Flask y base de datos SQLite.</p>
-        
- <a href="https://sistema-de-inventario-2fim.onrender.com" target="_blank"> 🌐 Ver Sistema en Línea</a>
-  
-
-
+        <p>App web para gestionar productos, entradas, salidas y reportes. Hecha con HTML, Flask y SQLite.</p>
+        <a href="https://sistema-de-inventario-2fim.onrender.com" target="_blank">🌐 Ver sistema en línea</a>
       </div>
-
       <div class="card">
         <h3>Landing Page para Restaurante</h3>
-        <p>Sitio responsivo para mostrar menú, recibir pedidos y generar ticket de compra. Estilo atractivo y fácil de usar.</p>
+        <p>Sitio responsivo para mostrar menú, recibir pedidos y generar ticket de compra. Atractivo y funcional.</p>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="formacion">
+      <h2>Formación Académica</h2>
+      <ul>
+        <li><strong>Técnico en Desarrollo de Software:</strong> ESIT</li>
+        <li><strong>Bachillerato General:</strong> INWTD</li>
+        <li><strong>Cursos:</strong> HTML, CSS, JavaScript, Python</li>
+      </ul>
+    </section>
+
+    <section id="feedback">
+      <h2>Feedback</h2>
+      <form action="https://formspree.io/f/mdkgrqkk" method="POST">
+        <input type="text" name="name" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <textarea name="message" placeholder="Tu mensaje..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section id="contact">
       <h2>Contacto</h2>
       <p>Email: danielvallec98@gmail.com</p>
       <p>Teléfono: +503 7481-1907</p>
-      
+      <p>País: El Salvador</p>
     </section>
-  </div>
 
+    <!-- Sección del reloj -->
+    <section class="clock-section">
+      <div class="clock-box">
+        <div id="time">00:00:00</div>
+        <div id="date">Lunes, 1 de Enero de 2025</div>
+      </div>
+    </section>
+  </main>
 
-   <nav>
-    <a href="#about">Sobre mí</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#contact">Contacto</a>
-     <a href="https://www.facebook.com/danielvalle" target="_blank">🌐 Facebook</a>
-      <a href="https://github.com/danielvll12" target="_blank">💻 GitHub</a>
-   </nav>
   <footer>
-    &copy; 2025 Daniel valle. Todos los derechos reservados.
+    &copy; 2025 Daniel Valle. Todos los derechos reservados.
   </footer>
 
 </body>
