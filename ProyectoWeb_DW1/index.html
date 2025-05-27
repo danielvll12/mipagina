@@ -3,63 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portafolio Daniel Valle</title>
+  <title>Daniel Valle - Portafolio</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="main.js"></script>
 </head>
 <body>
-
-  <div class="parallax"></div>
-
-  <header>
-    <img src="perfil.jpg" alt="Foto de perfil">
-    <h1>¡Hola, Soy Daniel José Valle Coreas</h1>
-    <p>Técnico en Desarrollo de Software</p>
+  <header class="parallax">
+    <div class="overlay">
+      <img src="perfil.jpg" alt="Foto de perfil" class="perfil">
+      <h1>Daniel José Valle Coreas</h1>
+      <p>Técnico en Desarrollo de Software</p>
+      <div class="reloj">
+        <span id="time"></span> | <span id="date"></span>
+      </div>
+    </div>
   </header>
 
-  <aside class="sidebar">
-    <div class="sidebar-logo">Mi Portafolio</div>
-    <nav class="sidebar-nav">
-      <a href="#about">Sobre mí</a>
-      <a href="#formacion">Estudios</a>
-      <a href="#projects">Proyectos</a>
-      <a href="#feedback">Feedback</a>
-      <a href="#contact">Contacto</a>
-      <a href="CV_Daniel_Valle.pdf" download>📄 Descargar CV</a>
-    </nav>
-    <div class="sidebar-socials">
-      <a href="https://wa.me/50374811907" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp"></a>
-      <a href="https://github.com/danielvlle12" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
-      <a href="https://facebook.com/danielvalle" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
-    </div>
-  </aside>
+  <nav class="navbar">
+    <div class="logo">Mi Portafolio</div>
+    <ul>
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#formacion">Estudios</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li><a href="CV_Daniel_Valle.pdf" download>📄 CV</a></li>
+    </ul>
+  </nav>
 
-  <main class="container">
+  <main>
     <section id="about">
       <h2>Sobre mí</h2>
-      <p>Soy un joven desarrollador web Frontend y Backend con pasión por la tecnología y la programación. Manejo bases de datos relacionales y no relacionales. Trabajo con Python, PHP, JavaScript, y frameworks como Django, Flask, Laravel y Node.js.</p>
+      <p>Soy un desarrollador apasionado por la tecnología y la creación de soluciones web.</p>
+    </section>
+
+    <section id="formacion">
+      <h2>Formación Académica</h2>
+      <ul>
+        <li>Técnico en Desarrollo de Software – ESIT</li>
+        <li>Bachillerato General – INWT Deininger</li>
+        <li>Otros cursos: HTML, CSS, JS, Python, etc.</li>
+      </ul>
     </section>
 
     <section id="projects">
       <h2>Proyectos</h2>
       <div class="card">
         <h3>Sistema de Inventario</h3>
-        <p>App web para gestionar productos, entradas, salidas y reportes. Hecha con HTML, Flask y SQLite.</p>
-        <a href="https://sistema-de-inventario-2fim.onrender.com" target="_blank">🌐 Ver sistema en línea</a>
+        <p>Web app con Flask y SQLite</p>
+        <a href="https://sistema-de-inventario-2fim.onrender.com" target="_blank">Ver Proyecto</a>
       </div>
       <div class="card">
         <h3>Landing Page para Restaurante</h3>
-        <p>Sitio responsivo para mostrar menú, recibir pedidos y generar ticket de compra. Atractivo y funcional.</p>
+        <p>Responsivo, menú dinámico y ticket</p>
       </div>
-    </section>
-
-    <section id="formacion">
-      <h2>Formación Académica</h2>
-      <ul>
-        <li><strong>Técnico en Desarrollo de Software:</strong> ESIT</li>
-        <li><strong>Bachillerato General:</strong> INWTD</li>
-        <li><strong>Cursos:</strong> HTML, CSS, JavaScript, Python</li>
-      </ul>
     </section>
 
     <section id="feedback">
@@ -67,7 +63,7 @@
       <form action="https://formspree.io/f/mdkgrqkk" method="POST">
         <input type="text" name="name" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu correo" required>
-        <textarea name="message" placeholder="Tu mensaje..." required></textarea>
+        <textarea name="message" placeholder="Mensaje" required></textarea>
         <button type="submit">Enviar</button>
       </form>
     </section>
@@ -75,15 +71,11 @@
     <section id="contact">
       <h2>Contacto</h2>
       <p>Email: danielvallec98@gmail.com</p>
-      <p>Teléfono: +503 7481-1907</p>
-      <p>País: El Salvador</p>
-    </section>
-
-    <!-- Sección del reloj -->
-    <section class="clock-section">
-      <div class="clock-box">
-        <div id="time">00:00:00</div>
-        <div id="date">Lunes, 1 de Enero de 2025</div>
+      <p>Tel: +503 7481-1907 | El Salvador</p>
+      <div class="socials">
+        <a href="https://wa.me/50374811907" target="_blank">WhatsApp</a>
+        <a href="https://github.com/danielvlle12" target="_blank">GitHub</a>
+        <a href="https://facebook.com/danielvalle" target="_blank">Facebook</a>
       </div>
     </section>
   </main>
@@ -92,5 +84,7 @@
     &copy; 2025 Daniel Valle. Todos los derechos reservados.
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
+

@@ -3,150 +3,105 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-:root {
-  --primary: #1e90ff;
-  --text: #ffffff;
-  --background: rgba(0, 0, 0, 0.7);
-}
-
-body, html {
+body {
   font-family: 'Segoe UI', sans-serif;
-  color: var(--text);
-  height: 100%;
+  line-height: 1.6;
+  background: #121212;
+  color: #fff;
 }
-
-.parallax {
-  background-image: url('background.jpg'); /* ⚠️ Pon aquí tu imagen */
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+header.parallax {
+  background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
-  filter: brightness(0.6);
+  height: 100vh;
+  position: relative;
 }
-
-header {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-header img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 10px;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 220px;
+.overlay {
+  background: rgba(0,0,0,0.6);
   height: 100%;
-  background-color: var(--background);
-  padding: 20px;
-  z-index: 100;
-}
-
-.sidebar-logo {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: var(--primary);
-}
-
-.sidebar-nav a {
-  display: block;
-  color: white;
-  padding: 10px 0;
-  text-decoration: none;
-}
-
-.sidebar-socials {
-  margin-top: 2rem;
-}
-
-.sidebar-socials a img {
-  width: 24px;
-  margin-right: 10px;
-}
-
-.container {
-  margin-left: 240px;
-  padding: 30px;
-  background-color: #121212;
-  min-height: 100vh;
-}
-
-section {
-  margin-bottom: 60px;
-}
-
-h2 {
-  color: var(--primary);
-  margin-bottom: 15px;
-}
-
-.card {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 15px;
-}
-
-.card a {
-  color: var(--primary);
-  text-decoration: underline;
-}
-
-form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
-form input, form textarea {
-  padding: 10px;
+.perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   margin-bottom: 10px;
-  background-color: #2e2e2e;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid #fff;
 }
-
-form button {
-  background-color: var(--primary);
-  border: none;
+.reloj {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #ccc;
+}
+.navbar {
+  background: #1e1e1e;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navbar .logo {
+  font-weight: bold;
+}
+.navbar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+}
+main {
+  padding: 40px 20px;
+}
+section {
+  margin-bottom: 50px;
+}
+.card {
+  background: #1f1f1f;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+input, textarea {
+  width: 100%;
   padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  padding: 10px 20px;
+  background: #00b894;
   color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
+.socials a {
+  margin-right: 10px;
+  color: #00b894;
+}
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #111;
-  color: white;
+  background: #111;
 }
-
-
-.clock-section {
-  text-align: center;
-  padding: 40px 0;
-}
-
-.clock-box {
-  background-color: #222;
-  display: inline-block;
-  padding: 20px 40px;
-  border-radius: 10px;
-  color: white;
-  font-size: 1.5rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  margin-top: 30px;
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header.parallax {
+    text-align: center;
+    padding: 20px;
+  }
 }
