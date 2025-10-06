@@ -7,6 +7,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- 🔹 Barra de navegación fija -->
+  <nav class="navbar">
+    <div class="logo">Mi Portafolio</div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul id="menu">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#formacion">Estudios</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+      <li><a href="CV_Daniel_Valle .pdf" target="_blank">📄 Ver CV</a></li>
+      <li><a href="6866bdaa23e57.pdf" target="_blank">📄 Ver Diploma PHP Laravel</a></li>
+      <li><a href="68d19e0cea210.pdf" target="_blank">📄 Ver Diploma QA Testing</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🔹 Encabezado con efecto parallax -->
   <header class="parallax">
     <div class="overlay">
       <img src="perfil.jpg" alt="Foto de perfil" class="perfil">
@@ -15,33 +32,21 @@
       <h1>soy estudiante de</h1>
       <h2>Técnico en Desarrollo de Software</h2>
 
-       <!-- Botón Contrátame -->
-    <a href="https://wa.me/50374811907" target="_blank" class="contratame-btn">📲 ¡Contrátame!</a>
+      <!-- Botón Contrátame -->
+      <a href="https://wa.me/50374811907" target="_blank" class="contratame-btn">📲 ¡Contrátame!</a>
+
       <div class="reloj">
         <span id="time"></span> | <span id="date"></span>
       </div>
     </div>
   </header>
 
-  <nav class="navbar">
-    <div class="logo">Mi Portafolio</div>
-    <ul>
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#formacion">Estudios</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      
-      <li><a href="#contact">Contacto</a></li>
-      <li><a href="CV_Daniel_Valle .pdf" target="_blank">📄 Ver CV</a></li>
-      <li><a href="6866bdaa23e57.pdf" target="_blank">📄 Ver Diploma php laravel</a></li>
-        <li><a href="68d19e0cea210.pdf" target="_blank">📄 Ver Diploma QA Testing</a></li>
-    </ul>
-  </nav>
-
+  <!-- 🔹 Contenido principal -->
   <main>
     <section id="about">
       <h2>Sobre mí</h2>
-      <p>Soy un desarrollador web frontend y backend apasionado por la tecnología y la creación de soluciones web, uso bases de datos relacionales y no relacionales, programo en python, php, javascript, uso frameworks laravel, node.js, flask, Django. </p>
-      <p>Uso metodologias Agiles y Diseño UI/UX.</p>
+      <p>Soy un desarrollador web frontend y backend apasionado por la tecnología y la creación de soluciones web. Uso bases de datos relacionales y no relacionales, programo en Python, PHP, JavaScript, y uso frameworks como Laravel, Node.js, Flask y Django.</p>
+      <p>También aplico metodologías ágiles y diseño UI/UX.</p>
     </section>
 
     <section id="formacion">
@@ -49,46 +54,47 @@
       <ul>
         <li>Técnico en Desarrollo de Software – ESIT</li>
         <li>Bachillerato General – INWT Deininger</li>
-        <li>Otros cursos: Desarrollo web en PHP y Laravel, QA Testing: Metodologias para la Gestion de pruebas de Calidad de software</li>
-    
+        <li>Otros cursos: Desarrollo web en PHP y Laravel, QA Testing: Metodologías para la gestión de pruebas de calidad de software</li>
       </ul>
     </section>
 
     <section id="projects">
       <h2>Proyectos</h2>
+
       <div class="card">
         <h3>Sistema para solicitar partidas de nacimiento</h3>
-        <p>pagina Responsivo, creada con Javascript, React.js y HTML+JSX</p>
+        <p>Página responsiva creada con JavaScript, React.js y HTML+JSX.</p>
         <a href="https://solicitar-partida-de-nacimiento.netlify.app/" target="_blank">Ver Proyecto</a>
       </div>
+
       <div class="card">
-        <h3>Landing Page para Taqueria</h3>
-        <p>Responsivo, menú dinámico y ticket</p>
+        <h3>Landing Page para Taquería</h3>
+        <p>Responsivo, menú dinámico y ticket.</p>
         <a href="https://restaurantemercy.netlify.app/" target="_blank">Ver Proyecto</a>
       </div>
-       <div class="card">
-        <h3>pagina web para mostrar una calculadora</h3>
-        <p>Responsivo, creada con Javascript, HTML y CSS</p>
+
+      <div class="card">
+        <h3>Página web de calculadora</h3>
+        <p>Responsiva, creada con JavaScript, HTML y CSS.</p>
         <a href="https://mycalculadoraweb.netlify.app/" target="_blank">Ver Proyecto</a>
       </div>
+
       <div class="card">
-        <h3>Sistema de Facturacion Electronico Para Taqueria</h3>
-        <p>Responsivo, creada con Javascript, React.js y HTML+JSX</p>
+        <h3>Sistema de Facturación Electrónica para Taquería</h3>
+        <p>Responsivo, creado con JavaScript, React.js y HTML+JSX.</p>
         <a href="https://sistema-de-facturacion-electronico.netlify.app/" target="_blank">Ver Proyecto</a>
       </div>
 
       <div class="card">
-        <h3>Pagina para alquiler de vehiculos</h3>
-        <p>Responsivo, creada con Javascript, React.js y HTML+JSX</p>
+        <h3>Página para alquiler de vehículos</h3>
+        <p>Responsiva, creada con JavaScript, React.js y HTML+JSX.</p>
         <a href="https://alquiler-de-vehiculos-sv.netlify.app/" target="_blank">Ver Proyecto</a>
       </div>
-    
-
-    
+    </section>
 
     <section id="contact">
       <h2>Contacto</h2>
-      <p>Email: danielvallec98@gmail.com</p>
+      <p>Email: <a href="mailto:danielvallec98@gmail.com">danielvallec98@gmail.com</a></p>
       <p>Tel: +503 7481-1907 | El Salvador</p>
       <div class="socials">
         <a href="https://wa.me/50374811907" target="_blank">WhatsApp</a>
@@ -98,11 +104,12 @@
     </section>
   </main>
 
+  <!-- 🔹 Footer -->
   <footer>
     &copy; 2025 Daniel Valle. Todos los derechos reservados.
   </footer>
 
+  <!-- 🔹 Script de menú y reloj -->
   <script src="main.js"></script>
 </body>
 </html>
-
