@@ -33,7 +33,6 @@ function padZero(num) {
 setInterval(updateClock, 1000);
 updateClock();
 
-// --- Menú responsive ---
 
 
 
@@ -64,15 +63,4 @@ links.forEach(link => {
 });
 
 // --- Reloj dinámico ---
-function actualizarReloj() {
-  const ahora = new Date();
-  const horas = ahora.getHours().toString().padStart(2, '0');
-  const minutos = ahora.getMinutes().toString().padStart(2, '0');
-  const segundos = ahora.getSeconds().toString().padStart(2, '0');
-  const fecha = ahora.toLocaleDateString();
 
-  document.getElementById('time').textContent = `${horas}:${minutos}:${segundos}`;
-  document.getElementById('date').textContent = fecha;
-}
-setInterval(actualizarReloj, 1000);
-actualizarReloj();
