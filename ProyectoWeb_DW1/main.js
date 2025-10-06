@@ -34,9 +34,45 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // --- Menú responsive ---
+
+
+
+
+// --- Menú responsive ---
 const toggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
+// Abrir / cerrar menú al tocar el ícono ☰
 toggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
+
+// Cerrar menú al hacer clic en un enlace y marcarlo como activo
+const links = document.querySelectorAll('.navbar a');
+
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    // Cerrar menú en móvil
+    menu.classList.remove('active');
+
+    // Quitar estado activo de todos los enlaces
+    links.forEach(l => l.classList.remove('activo'));
+
+    // Agregar estado activo al enlace seleccionado
+    e.target.classList.add('activo');
+  });
+});
+
+// --- Reloj dinámico ---
+function actualizarReloj() {
+  const ahora = new Date();
+  const horas = ahora.getHours().toString().padStart(2, '0');
+  const minutos = ahora.getMinutes().toString().padStart(2, '0');
+  const segundos = ahora.getSeconds().toString().padStart(2, '0');
+  const fecha = ahora.toLocaleDateString();
+
+  document.getElementById('time').textContent = `${horas}:${minutos}:${segundos}`;
+  document.getElementById('date').textContent = fecha;
+}
+setInterval(actualizarReloj, 1000);
+actualizarReloj();

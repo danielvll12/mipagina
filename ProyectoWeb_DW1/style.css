@@ -234,3 +234,14 @@ html {
     height: 100px;
   }
 }
+
+
+
+
+
+/* --- Enlace activo en el menú --- */
+.navbar a.activo {
+  background-color: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 12px #38bdf8;
+}
