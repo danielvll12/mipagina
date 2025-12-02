@@ -1,237 +1,290 @@
-/* --- RESET GENERAL --- */
+/* ============================
+   RESET Y CONFIGURACIÓN GLOBAL
+============================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* --- ESTILOS BASE --- */
 body {
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #121212;
-  color: #fff;
+  font-family: "Poppins", sans-serif;
+  background: #0d0f13;
+  color: #ffffff;
   overflow-x: hidden;
 }
 
-/* --- EFECTO PARALLAX HEADER --- */
-header.parallax {
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  height: calc(100vh - 80px); /* 🔹 Ajustado para no tapar contenido */
-  position: relative;
-  margin-top: 80px; /* 🔹 Evita que quede debajo del navbar */
+/* Gradiente para títulos */
+.gradient {
+  background: linear-gradient(45deg, #38bdf8, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-.overlay {
-  background: rgba(0,0,0,0.6);
+/* ============================
+   NAVBAR — Estilo Premium
+============================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(13, 15, 19, 0.55); /* ✔ Más elegante */
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+/* Menú (mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #38bdf8;
+}
+
+/* ============================
+   HEADER PARALLAX
+============================ */
+.parallax {
+  height: 100vh;
+  background: url("background.jpg") center/cover no-repeat fixed; /* ✔ FONDO MANTENIDO */
+  position: relative;
+}
+
+.parallax .overlay {
+  width: 100%;
   height: 100%;
+  background: rgba(13, 15, 19, 0.78); /* ✔ Más elegante y profesional */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
-/* --- PERFIL --- */
+/* Foto de perfil */
 .perfil {
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  margin-bottom: 10px;
-  border: 2px solid #fff;
+  object-fit: cover;
+  border: 4px solid #38bdf8;
+  box-shadow: 0px 0px 25px rgba(56, 189, 248, 0.5);
+  margin-bottom: 20px;
 }
 
-/* --- RELOJ --- */
-.reloj {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #ccc;
-}
-
-/* --- NAVBAR MODERNA --- */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(30, 41, 59, 0.9);
-  backdrop-filter: blur(8px);
-  padding: 15px 40px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Textos del header */
+.title {
+  font-size: 3rem;
+  font-weight: 700;
   letter-spacing: 1px;
-  color: #38bdf8;
 }
 
-/* --- NAV LINKS --- */
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s ease;
+.subtitle {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  color: #c084fc;
 }
 
-.navbar ul li {
-  list-style: none;
+.header-text {
+  max-width: 620px;
+  opacity: 0.9;
+  margin-top: 15px;
+  line-height: 1.7;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #e2e8f0;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  padding: 8px 14px;
-  border-radius: 8px;
-}
-
-.navbar a:hover {
-  background-color: #38bdf8;
-  color: #0f172a;
-  box-shadow: 0 0 10px #38bdf8;
-}
-
-/* --- BOTÓN MENÚ (MÓVIL) --- */
-.menu-toggle {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #38bdf8;
-}
-
-/* --- SECCIONES GENERALES --- */
-main {
-  padding: 40px 20px;
-  margin-top: 100px; /* 🔹 Baja el contenido debajo del navbar */
-}
-
-section {
-  margin-bottom: 50px;
-}
-
-.card {
-  background: #1f1f1f;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 10px;
-}
-
-/* --- FORMULARIOS --- */
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
-  border-radius: 5px;
-  border: none;
-}
-
-/* --- BOTONES --- */
-button {
-  padding: 10px 20px;
-  background: #00b894;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #1ebe5d;
-  transform: scale(1.05);
-  transition: 0.3s ease;
-}
-
-/* --- REDES SOCIALES --- */
-.socials a {
-  margin-right: 10px;
-  color: #00b894;
-}
-
-/* --- FOOTER --- */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-}
-
-/* --- BOTÓN CONTRÁTAME --- */
+/* Botón principal */
 .contratame-btn {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 15px 30px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: rgb(117, 60, 175);
+  margin-top: 28px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+  border-radius: 40px;
   color: white;
-  border: none;
-  border-radius: 8px;
   text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 20px rgba(56,189,248,0.3);
 }
 
 .contratame-btn:hover {
-  background-color: #1ebe5d;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(129, 140, 248, 0.6);
 }
 
-/* --- SCROLL SUAVE --- */
-html {
-  scroll-behavior: smooth;
+/* Reloj */
+.reloj {
+  margin-top: 22px;
+  font-size: 1.1rem;
+  opacity: 0.85;
 }
 
-/* --- RESPONSIVE PARA MÓVILES --- */
+/* ============================
+   SECCIONES GENERALES
+============================ */
+.section {
+  padding: 90px 10%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #38bdf8;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   TARJETAS GLASSMORPHISM
+============================ */
+.glass,
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 45px rgba(56,189,248,0.35);
+}
+
+/* ============================
+   HABILIDADES (GRID)
+============================ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* ============================
+   PROYECTOS (GRID)
+============================ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.card a {
+  color: #38bdf8;
+  margin-top: 16px;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  color: #c084fc;
+}
+
+/* ============================
+   CONTACTO
+============================ */
+.socials {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+}
+
+.socials a {
+  color: #818cf8;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 12px #38bdf8;
+}
+
+/* ============================
+   FOOTER
+============================ */
+footer {
+  background: #090b0e;
+  text-align: center;
+  padding: 35px;
+  color: #bbb;
+  margin-top: 60px;
+}
+
+/* ============================
+   ANIMACIONES
+============================ */
+.fade-in {
+  animation: fadeIn 1.4s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 768px) {
-  .navbar {
+  .navbar ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 220px;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
+    background: rgba(0,0,0,0.90);
+    padding: 25px;
+    border-radius: 12px;
+    display: none;
+  }
+
+  #menu.show {
+    display: flex;
   }
 
   .menu-toggle {
     display: block;
   }
 
-  .navbar ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    margin-top: 10px;
-    display: none; /* 🔹 Oculto por defecto */
-  }
-
-  .navbar ul.active {
-    display: flex; /* 🔹 Muestra menú al hacer clic */
-  }
-
-  .navbar li {
-    width: 100%;
-  }
-
-  .navbar a {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  header.parallax {
-    margin-top: 100px;
-    height: auto; /* 🔹 Evita tapar el contenido */
-    padding: 40px 20px;
-  }
-
-  .perfil {
-    width: 100px;
-    height: 100px;
+  .title {
+    font-size: 2.2rem;
   }
 }
 
@@ -239,9 +292,105 @@ html {
 
 
 
-/* --- Enlace activo en el menú --- */
-.navbar a.activo {
-  background-color: #38bdf8;
-  color: #0f172a;
-  box-shadow: 0 0 12px #38bdf8;
+
+/* NAVBAR GENERAL */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+}
+
+/* LOGO */
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* MENU ESCRITORIO */
+#menu {
+  display: flex;
+  gap: 20px;
+}
+
+#menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  z-index: 10000; /* Siempre arriba */
+}
+
+/* FOTO DE PERFIL */
+.perfil {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1; /* No queda detrás del menú */
+}
+
+/* MENÚ MÓVIL */
+@media (max-width: 768px) {
+
+  /* Ocultar menú escritorio */
+  #menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 25px;
+    background: rgba(0,0,0,0.9);
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    z-index: 9998;
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+
+header.parallax {
+  padding-top: 120px; /* separa la foto del navbar */
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+
+@media (max-width: 768px) {
+  .perfil {
+    margin-top: 60px;   /* baja la foto */
+    z-index: 1;
+  }
+
+  header.parallax {
+    padding-top: 150px; /* baja todo el contenido del header */
+  }
 }

@@ -3,37 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Valle - Portafolio</title>
+  <title>Daniel Valle - Portafolio Profesional</title>
+
+  <!-- Tipografía profesional -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 🔹 Barra de navegación fija -->
+  <!-- 🔥 NAVBAR PROFESIONAL -->
   <nav class="navbar">
-    <div class="logo">Mi Portafolio</div>
+    <div class="logo">Portafolio</div>
     <div class="menu-toggle" id="menu-toggle">☰</div>
+
     <ul id="menu">
       <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#formacion">Estudios</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+       <li><a href="#formacion">Formación Académica</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#contact">Contacto</a></li>
-      <li><a href="CV_Daniel_Valle .pdf" target="_blank">📄 Ver CV</a></li>
-      <li><a href="6866bdaa23e57.pdf" target="_blank">📄 Ver Diploma PHP Laravel</a></li>
-      <li><a href="68d19e0cea210.pdf" target="_blank">📄 Ver Diploma QA Testing</a></li>
+      <li><a href="CV_Daniel_Valle .pdf" target="_blank" class="cv-btn">📄 Ver CV</a></li>
+       <li><a href="6866bdaa23e57.pdf" target="_blank" class="cv-btn">📄 Ver Diploma </a></li>
+        <li><a href="68d19e0cea210.pdf" target="_blank" class="cv-btn">📄 Ver Diploma QA</a></li>
     </ul>
   </nav>
 
-  <!-- 🔹 Encabezado con efecto parallax -->
+  <!-- 🔥 HEADER PARALLAX PROFESIONAL -->
   <header class="parallax">
-    <div class="overlay">
-      <img src="perfil.jpg" alt="Foto de perfil" class="perfil">
-      <h1>¡Hola, me llamo</h1>
-      <h1>Daniel José Valle Coreas</h1>
-      <h1>soy estudiante de</h1>
-      <h2>Técnico en Desarrollo de Software</h2>
+    <div class="overlay fade-in">
 
-      <!-- Botón Contrátame -->
-      <a href="https://wa.me/50374811907" target="_blank" class="contratame-btn">📲 ¡Contrátame!</a>
+      <img src="perfil.jpg" class="perfil" alt="Foto de Daniel">
+
+      <h1 class="title">
+        Hola 👋, soy <span class="gradient">Daniel Valle</span>
+      </h1>
+
+      <h2 class="subtitle">Desarrollador Web & Móvil</h2>
+
+      <p class="header-text">
+        Creo soluciones digitales modernas, seguras y escalables con tecnologías web y móviles.
+      </p>
+
+      <a href="https://wa.me/50374811907" target="_blank" class="contratame-btn">
+        🚀 Contrátame
+      </a>
 
       <div class="reloj">
         <span id="time"></span> | <span id="date"></span>
@@ -41,81 +55,142 @@
     </div>
   </header>
 
-  <!-- 🔹 Contenido principal -->
   <main>
-    <section id="about">
-      <h2>Sobre mí</h2>
-<p>Soy un desarrollador web full stack y de aplicaciones móviles, apasionado por la tecnología y la creación de soluciones digitales innovadoras. Trabajo con bases de datos relacionales y no relacionales, y domino varios lenguajes de programación como Python, PHP, JavaScript y Kotlin.</p>
-<p>Utilizo frameworks modernos como Laravel, Node.js, Flask y Django para desarrollar proyectos eficientes y escalables. Además, aplico metodologías ágiles como Scrum y me enfoco en ofrecer interfaces atractivas y funcionales bajo principios de diseño UI/UX.</p>
 
+    <!-- 🔥 SOBRE MI -->
+    <section id="about" class="section fade-in">
+      <h2 class="section-title">Sobre mí</h2>
+      <p>
+        Soy un desarrollador apasionado por las soluciones eficientes y el diseño moderno. Trabajo con 
+        tecnologías Full Stack como JavaScript, React, Flask, Laravel, Python, Node.js y Kotlin.
+      </p>
+      <p>
+        Me enfoco en construir interfaces profesionales, rápidas y responsivas aplicando buenas prácticas, 
+        arquitectura limpia y metodologías ágiles como Scrum.
+      </p>
     </section>
 
-    <section id="formacion">
-      <h2>Formación Académica</h2>
-      <ul>
-        <li>Técnico en Desarrollo de Software – ESIT</li>
-        <li>Bachillerato General – INWT Deininger</li>
-        <li>Otros cursos: Desarrollo web en PHP y Laravel, QA Testing: Metodologías para la gestión de pruebas de calidad de software</li>
-      </ul>
+    <!-- 🔥 FORMACIÓN ACADÉMICA -->
+<section id="formacion" class="section fade-in">
+  <h2 class="section-title">Formación Académica</h2>
+
+  <div class="skills-grid">
+
+    <div class="glass card">
+      <h3>Técnico en Desarrollo de Software</h3>
+      <p>ESIT – Escuela Superior de Innovación y Tecnología</p>
+    </div>
+
+    <div class="glass card">
+      <h3>Bachillerato General</h3>
+      <p>INWT Deininger</p>
+    </div>
+
+    <div class="glass card">
+      <h3>Otros Cursos</h3>
+      <p>Desarrollo Web en PHP y Laravel</p>
+      <p>QA Testing: Gestión de pruebas de software</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- 🔥 HABILIDADES PROFESIONALES -->
+    <section id="skills" class="section fade-in">
+      <h2 class="section-title">Habilidades</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-card glass">
+          <h3>Frontend</h3>
+          <p>React, HTML5, CSS3, JavaScript, UI/UX</p>
+        </div>
+
+        <div class="skill-card glass">
+          <h3>Backend</h3>
+          <p>Python, PHP, Laravel, Flask, Node.js</p>
+        </div>
+
+        <div class="skill-card glass">
+          <h3>Bases de Datos</h3>
+          <p>MySQL, PostgreSQL, MongoDB, SQLite</p>
+        </div>
+
+        <div class="skill-card glass">
+          <h3>Mobile</h3>
+          <p>Kotlin, Apps Android</p>
+        </div>
+
+      </div>
     </section>
 
-    <section id="projects">
-      <h2>Proyectos</h2>
+    <!-- 🔥 PROYECTOS PROFESIONALES -->
+    <section id="projects" class="section fade-in">
+      <h2 class="section-title">Proyectos</h2>
 
-      <div class="card">
-        <h3>Pagína web para solicitar partidas de nacimiento</h3>
-        <p>Página responsiva creada con JavaScript, React.js y HTML+JSX.</p>
-        <a href="https://solicitar-partida-de-nacimiento.netlify.app/" target="_blank">Ver Proyecto</a>
-      </div>
+      <div class="project-grid">
 
-      <div class="card">
-        <h3>Landing Page para Taquería</h3>
-        <p>Responsivo, menú dinámico y ticket.</p>
-        <a href="https://restaurantemercy.netlify.app/" target="_blank">Ver Proyecto</a>
-      </div>
+        <div class="card glass">
+          <h3>Partidas de nacimiento</h3>
+          <p>React + JSX. Rápido, moderno y responsivo.</p>
+          <a href="https://solicitar-partida-de-nacimiento.netlify.app/" target="_blank">Ver Proyecto</a>
+        </div>
 
-      <div class="card">
-        <h3>Página web de calculadora</h3>
-        <p>Responsiva, creada con JavaScript, HTML y CSS.</p>
-        <a href="https://mycalculadoraweb.netlify.app/" target="_blank">Ver Proyecto</a>
-      </div>
+        <div class="card glass">
+          <h3>Taquería – Landing Page</h3>
+          <p>Menú dinámico con ticket digital.</p>
+          <a href="https://restaurantemercy.netlify.app/" target="_blank">Ver Proyecto</a>
+        </div>
 
-      <div class="card">
-        <h3>Sistema de cobro para Taquería</h3>
-        <p>Responsivo, creado con JavaScript, React.js y HTML+JSX.</p>
-        <a href="https://sistema-de-cobro.netlify.app/" target="_blank">Ver Proyecto</a>
-      </div>
+        <div class="card glass">
+          <h3>Calculadora Web</h3>
+          <p>Diseño intuitivo, HTML+CSS+JS.</p>
+          <a href="https://mycalculadoraweb.netlify.app/" target="_blank">Ver Proyecto</a>
+        </div>
 
-      <div class="card">
-        <h3>Página para alquiler de vehículos</h3>
-        <p>Responsiva, creada con JavaScript, React.js y HTML+JSX.</p>
-        <a href="https://alquiler-de-vehiculos-sv.netlify.app/" target="_blank">Ver Proyecto</a>
-      </div>
-       <div class="card">
-        <h3>Página para aprender objetos,vocales,abecedario, para niño</h3>
-        <p>Responsiva, creada con JavaScript, HTML y CSS</p>
-        <a href="https://juegodeobjetos.netlify.app/" target="_blank">Ver Proyecto</a>
+        <div class="card glass">
+          <h3>Sistema de Cobro</h3>
+          <p>React profesional, UI moderna.</p>
+          <a href="https://sistema-de-cobro.netlify.app/" target="_blank">Ver Proyecto</a>
+        </div>
+
+        <div class="card glass">
+          <h3>Alquiler de Vehículos</h3>
+          <p>React, diseño limpio y responsivo.</p>
+          <a href="https://alquiler-de-vehiculos-sv.netlify.app/" target="_blank">Ver Proyecto</a>
+        </div>
+
+        <div class="card glass">
+          <h3>Juego Educativo</h3>
+          <p>Ideal para niños, responsivo y creativo.</p>
+          <a href="https://juegodeobjetos.netlify.app/" target="_blank">Ver Proyecto</a>
+        </div>
+
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contacto</h2>
+    <!-- 🔥 CONTACTO -->
+    <section id="contact" class="section fade-in">
+      <h2 class="section-title">Contacto</h2>
+
       <p>Email: <a href="mailto:danielvallec98@gmail.com">danielvallec98@gmail.com</a></p>
-      <p>Tel: +503 7481-1907 | El Salvador</p>
+      <p>Tel: +503 7481-1907</p>
+
       <div class="socials">
         <a href="https://wa.me/50374811907" target="_blank">WhatsApp</a>
         <a href="https://github.com/danielvll12" target="_blank">GitHub</a>
-        <a href="https://www.facebook.com/profile.php?viewas=100000686899395&id=100086488687075" target="_blank">Facebook</a>
+        <a href="https://facebook.com/profile.php?id=100086488687075" target="_blank">Facebook</a>
       </div>
     </section>
+
   </main>
 
-  <!-- 🔹 Footer -->
   <footer>
-    &copy; 2025 Daniel Valle. Todos los derechos reservados.
+    © 2025 Daniel Valle.
   </footer>
 
-  <!-- 🔹 Script de menú y reloj -->
-  <script src="main.js"></script>
+<script src="main.js"></script>
+
 </body>
 </html>
