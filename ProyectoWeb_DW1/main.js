@@ -1,4 +1,6 @@
-
+/* ============================
+   RELOJ Y FECHA
+============================ */
 function updateClock() {
   const now = new Date();
 
@@ -33,39 +35,120 @@ function padZero(num) {
 setInterval(updateClock, 1000);
 updateClock();
 
-
-
-
-
-// --- Menú responsive ---
+/* ============================
+   MENÚ RESPONSIVE
+============================ */
 const toggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
-// Abrir / cerrar menú al tocar el ícono ☰
 toggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
+  menu.classList.toggle('show');
+  toggle.classList.toggle('active');
 });
 
-// Cerrar menú al hacer clic en un enlace y marcarlo como activo
-const links = document.querySelectorAll('.navbar a');
+// Cerrar menú al hacer clic en un enlace
+const navLinks = document.querySelectorAll('.nav-menu .nav-link');
 
-links.forEach(link => {
-  link.addEventListener('click', (e) => {
-    // Cerrar menú en móvil
-    menu.classList.remove('active');
-
-    // Quitar estado activo de todos los enlaces
-    links.forEach(l => l.classList.remove('activo'));
-
-    // Agregar estado activo al enlace seleccionado
-    e.target.classList.add('activo');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('show');
+    toggle.classList.remove('active');
   });
 });
 
-// --- Reloj dinámico ---
+/* ============================
+   ANIMACIONES AL SCROLL
+============================ */
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
 
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
 
+// Observar todas las tarjetas
+document.querySelectorAll('.glass-card').forEach(card => {
+  observer.observe(card);
+});
 
+/* ============================
+   EFECTO PARALLAX MEJORADO
+============================ */
+let ticking = false;
 
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      const scrolled = window.pageYOffset;
+      const orbs = document.querySelectorAll('.gradient-orb');
 
+      orbs.forEach((orb, index) => {
+        const factor = (index + 1) * 0.05;
+        orb.style.transform = `translateY(${scrolled * factor}px)`;
+      });
 
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+
+/* ============================
+   SMOOTH SCROLL LINKS
+============================ */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+
+    e.preventDefault();
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+/* ============================
+   DETECCIÓN DE SECCIÓN ACTIVA
+============================ */
+const sections = document.querySelectorAll('section');
+const navItems = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop - 200) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('href').slice(1) === current) {
+      item.classList.add('active');
+    }
+  });
+});
+
+/* ============================
+   CARGA INICIAL
+============================ */
+window.addEventListener('load', () => {
+  document.body.style.opacity = '1';
+});
