@@ -70,7 +70,7 @@ body {
 }
 
 .logo-icon {
-  width: 40px;
+  width: 95px;
   height: 40px;
   background: linear-gradient(135deg, #6b7aff, #7c3aed);
   border-radius: 10px;
@@ -238,8 +238,15 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(30px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
 }
 
 .hero-content {
@@ -253,6 +260,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -271,9 +279,12 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 60px rgba(107, 122, 255, 0.3);
   }
+
   50% {
     box-shadow: 0 0 90px rgba(124, 58, 237, 0.5);
   }
@@ -297,6 +308,7 @@ body {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -381,7 +393,8 @@ body {
   animation: slideUp 0.8s ease-out 0.5s both;
 }
 
-.clock, .date {
+.clock,
+.date {
   font-weight: 500;
 }
 
@@ -398,8 +411,15 @@ body {
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(10px); }
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
 }
 
 .scroll-dot {
@@ -824,8 +844,15 @@ body {
 }
 
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 /* ============================
@@ -840,6 +867,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -957,7 +985,8 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .btn-primary, .btn-secondary {
+  .btn-primary,
+  .btn-secondary {
     padding: 12px 24px;
     font-size: 0.9rem;
   }
